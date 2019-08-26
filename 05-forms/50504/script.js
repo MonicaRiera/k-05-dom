@@ -1,17 +1,16 @@
-const checkName = name => {
-	if (name.value.length <= 2) {
-		console.log('I WANT MORE')
+const checkInput = input => {
+	let id = 'name'
+	let min = 3
+
+	if (input.type == 'password') {
+		id = 'password'
+		min = 9
+	}
+
+	let span = Array.from(document.getElementById(id).getElementsByClassName('error'))[0]
+	if (input.value.length < min) {
+		span.innerHTML = `At least ${min} characters`
 	} else {
-		console.log('Enough')
+		span.innerHTML = ''
 	}
 }
-
-const checkPassword = pass => {
-	if (pass.value.length <= 8) {
-		console.log('I WANT MORE')
-	} else {
-		console.log('Enough')
-	}
-}
-
-// How to call a child element?

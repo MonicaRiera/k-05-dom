@@ -6,5 +6,3 @@ Array.from(document.getElementsByClassName('product'))
 	e.innerHTML = ''
 	e.classList.remove('product')
 })
-
-// How to remove html elements from JS?
